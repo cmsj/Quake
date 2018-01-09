@@ -104,13 +104,13 @@ int _int86(int vector, __dpmi_regs *iregs, __dpmi_regs *oregs);
 
 #define CHUNNEL_INT 0x48
 
-#define int386		_int86
-#define REGISTERS	__dpmi_regs
+#define int386    _int86
+#define REGISTERS __dpmi_regs
 
 void
 Yield(void)
 {
-	__dpmi_yield();
+  __dpmi_yield();
 }
 
 void

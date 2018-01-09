@@ -86,22 +86,22 @@ Zone block
 void Memory_Init (void *buf, int size);
 
 void Z_Free (void *ptr);
-void *Z_Malloc (int size);			// returns 0 filled memory
+void *Z_Malloc (int size);      // returns 0 filled memory
 void *Z_TagMalloc (int size, int tag);
 
 void Z_DumpHeap (void);
 void Z_CheckHeap (void);
 int Z_FreeMemory (void);
 
-void *Hunk_Alloc (int size);		// returns 0 filled memory
+void *Hunk_Alloc (int size);    // returns 0 filled memory
 void *Hunk_AllocName (int size, char *name);
 
 void *Hunk_HighAllocName (int size, char *name);
 
-int	Hunk_LowMark (void);
+int Hunk_LowMark (void);
 void Hunk_FreeToLowMark (int mark);
 
-int	Hunk_HighMark (void);
+int Hunk_HighMark (void);
 void Hunk_FreeToHighMark (int mark);
 
 void *Hunk_TempAlloc (int size);
@@ -110,7 +110,7 @@ void Hunk_Check (void);
 
 typedef struct cache_user_s
 {
-	void	*data;
+  void  *data;
 } cache_user_t;
 
 void Cache_Flush (void);

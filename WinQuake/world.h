@@ -21,25 +21,25 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 typedef struct
 {
-	vec3_t	normal;
-	float	dist;
+  vec3_t  normal;
+  float dist;
 } plane_t;
 
 typedef struct
 {
-	qboolean	allsolid;	// if true, plane is not valid
-	qboolean	startsolid;	// if true, the initial point was in a solid area
-	qboolean	inopen, inwater;
-	float	fraction;		// time completed, 1.0 = didn't hit anything
-	vec3_t	endpos;			// final position
-	plane_t	plane;			// surface normal at impact
-	edict_t	*ent;			// entity the surface is on
+  qboolean  allsolid; // if true, plane is not valid
+  qboolean  startsolid; // if true, the initial point was in a solid area
+  qboolean  inopen, inwater;
+  float fraction;   // time completed, 1.0 = didn't hit anything
+  vec3_t  endpos;     // final position
+  plane_t plane;      // surface normal at impact
+  edict_t *ent;     // entity the surface is on
 } trace_t;
 
 
-#define	MOVE_NORMAL		0
-#define	MOVE_NOMONSTERS	1
-#define	MOVE_MISSILE	2
+#define MOVE_NORMAL   0
+#define MOVE_NOMONSTERS 1
+#define MOVE_MISSILE  2
 
 
 void SV_ClearWorld (void);
@@ -62,7 +62,7 @@ int SV_TruePointContents (vec3_t p);
 // does not check any entities at all
 // the non-true version remaps the water current contents to content_water
 
-edict_t	*SV_TestEntityPosition (edict_t *ent);
+edict_t *SV_TestEntityPosition (edict_t *ent);
 
 trace_t SV_Move (vec3_t start, vec3_t mins, vec3_t maxs, vec3_t end, int type, edict_t *passedict);
 // mins and maxs are reletive
